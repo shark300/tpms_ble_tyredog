@@ -71,6 +71,7 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -1487,6 +1488,9 @@ public class blescreenMain extends Activity {
                             pressure = press + 0.5;
                         } else {
                             pressure = press + 0.0;
+                        }
+                        if (wrx) {
+                            Log.d(TAG, String.format(Locale.ENGLISH ,"Set temperature: %s and %s pressure for wheel: %s", temp, pressure, wheel_N));
                         }
                         PressData[wheel_N] = pressure;
                         TempData[wheel_N] = temp;
