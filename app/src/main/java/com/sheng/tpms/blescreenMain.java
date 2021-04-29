@@ -42,10 +42,12 @@ import android.graphics.BitmapFactory;
 import android.media.AudioManager;
 import android.media.ToneGenerator;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Vibrator;
+import android.support.annotation.RequiresApi;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -69,6 +71,9 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import static android.media.AudioManager.STREAM_ALARM;
 import static com.sheng.tpms.R.id.BtnDemo;
@@ -3176,25 +3181,25 @@ public class blescreenMain extends Activity {
 
         miBtnAnt.setImageResource(R.drawable.p_sign_rx_3);
 
-        if (josn_config == true) {
-            if (wheelN_k == 2 ){
-                miBtnMode1.setImageResource(R.drawable.p_mode_status_1_j_moto);
-            }else if (wheelN_k >= 4 ) {
-                miBtnMode1.setImageResource(R.drawable.p_mode_status_1_j_car);
-            }
-            miBtnMode2.setImageResource(R.drawable.p_mode_voice_0_j);
-            miBtnMode3.setImageResource(R.drawable.p_mode_set_0_j);
-            miBtnMode4.setImageResource(R.drawable.p_mode_about_0_j);
-            miBtnMain.setImageResource(R.drawable.p_main_car_0_j);
-            miBtnLogo.setImageResource(R.drawable.p_logo_tyredog_0_j);
-        } else {
+//        if (josn_config == true) {
+//            if (wheelN_k == 2 ){
+//                miBtnMode1.setImageResource(R.drawable.p_mode_status_1_j_moto);
+//            }else if (wheelN_k >= 4 ) {
+//                miBtnMode1.setImageResource(R.drawable.p_mode_status_1_j_car);
+//            }
+//            miBtnMode2.setImageResource(R.drawable.p_mode_voice_0_j);
+//            miBtnMode3.setImageResource(R.drawable.p_mode_set_0_j);
+//            miBtnMode4.setImageResource(R.drawable.p_mode_about_0_j);
+//            miBtnMain.setImageResource(R.drawable.p_main_car_0_j);
+//            miBtnLogo.setImageResource(R.drawable.p_logo_tyredog_0_j);
+//        } else {
             miBtnMode1.setImageResource(R.drawable.p_mode_status_1);
             miBtnMode2.setImageResource(R.drawable.p_mode_voice_0);
             miBtnMode3.setImageResource(R.drawable.p_mode_set_0);
             miBtnMode4.setImageResource(R.drawable.p_mode_about_0);
             miBtnMain.setImageResource(R.drawable.p_main_car_0);
             miBtnLogo.setImageResource(R.drawable.p_logo_tyredog_0);
-        }
+//        }
 
         miBtnTunit.setImageResource(R.drawable.p_unitt_c_0);
         miBtnPunit.setImageResource(R.drawable.p_unitp_psi_0);
@@ -3219,13 +3224,13 @@ public class blescreenMain extends Activity {
         miBtnBt4.setImageResource(R.drawable.p_sign_bt_0);
     }//init_icon_Port
     public void init_icon_Land() {
-        if (josn_config == true) {
-            miBtnMain.setImageResource(R.drawable.p_main_car_0_j);
-            miBtnLogo.setImageResource(R.drawable.l_logo_tyredog_0_j);
-        } else {
+//        if (josn_config == true) {
+//            miBtnMain.setImageResource(R.drawable.p_main_car_0_j);
+//            miBtnLogo.setImageResource(R.drawable.l_logo_tyredog_0_j);
+//        } else {
             miBtnMain.setImageResource(R.drawable.p_main_car_0);
             miBtnLogo.setImageResource(R.drawable.l_logo_tyredog_0);
-        }
+//        }
 
         miBtnAnt.setImageResource(R.drawable.l_sign_rx_3);
 
