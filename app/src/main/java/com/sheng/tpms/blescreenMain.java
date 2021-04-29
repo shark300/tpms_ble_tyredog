@@ -226,7 +226,7 @@ public class blescreenMain extends Activity {
     final static int[] wheelon = {R.drawable.p_no_1_1,R.drawable.p_no_2_2,R.drawable.p_no_3_2,R.drawable.p_no_4_2};
     final static int[] wheeloff = {R.drawable.p_no_1_0,R.drawable.p_no_2_0,R.drawable.p_no_3_0,R.drawable.p_no_4_0};
 
-    private int wheelN_kT = 6;
+    private static final int wheelN_kT = 7;
 
 
     private double PressData[]=new double[wheelN_kT];
@@ -262,7 +262,7 @@ public class blescreenMain extends Activity {
     private boolean TempHRFlag[]=new boolean[wheelN_kT];
 
     private boolean FLASH_WHEEL[]=new boolean[wheelN_kT];
-    private int CHANGE_WHEEL[]=new int[]{0,1,2,3,4,5};
+    private int CHANGE_WHEEL[]=new int[]{0,1,2,3,4,5,6};
 
 
     private int HIGHPRESS = 0;
